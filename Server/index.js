@@ -12,8 +12,12 @@ app.use('/api/subscriptions/webhook', express.raw({ type: 'application/json' }))
 
 // ─── Middleware ──────────────────────────────────────────────────────────────
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
-  credentials: true,
+  origin: [
+    "http://localhost:5173",
+    "https://golfcharity-five.vercel.app",
+    "https://golfcharity-qj483y9u6-tobiyadav4574-5334s-projects.vercel.app"
+  ],
+  credentials: true
 }));
 app.use(express.json());
 
