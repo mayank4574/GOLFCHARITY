@@ -15,7 +15,7 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "https://golfcharity-five.vercel.app",
-    "https://golfcharity-qj483y9u6-tobiyadav4574-5334s-projects.vercel.app"
+    /\.vercel\.app$/
   ],
   credentials: true
 }));
